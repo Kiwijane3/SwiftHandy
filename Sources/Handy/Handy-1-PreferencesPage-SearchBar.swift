@@ -130,6 +130,11 @@ public extension PreferencesPageRef {
 /// Use `PreferencesPage` as a strong reference or owner of a `HdyPreferencesPage` instance.
 ///
 open class PreferencesPage: Gtk.Bin, PreferencesPageProtocol {
+    /// Creates a new HdyPreferencesPage.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_preferences_page_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `PreferencesPage` instance.
@@ -2852,6 +2857,11 @@ public extension PreferencesWindowRef {
 /// Use `PreferencesWindow` as a strong reference or owner of a `HdyPreferencesWindow` instance.
 ///
 open class PreferencesWindow: Window, PreferencesWindowProtocol {
+    /// Creates a new HdyPreferencesWindow.
+    @inlinable public override init() {
+         super.init(retainingRaw: UnsafeMutableRawPointer(hdy_preferences_window_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `PreferencesWindow` instance.
@@ -4415,6 +4425,11 @@ public extension SearchBarRef {
 /// Use `SearchBar` as a strong reference or owner of a `HdySearchBar` instance.
 ///
 open class SearchBar: Gtk.Bin, SearchBarProtocol {
+    /// Creates a HdySearchBar. You will need to tell it about which widget is going to be your text entry using hdy_search_bar_connect_entry().
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_search_bar_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `SearchBar` instance.

@@ -130,6 +130,11 @@ public extension ViewSwitcherRef {
 /// Use `ViewSwitcher` as a strong reference or owner of a `HdyViewSwitcher` instance.
 ///
 open class ViewSwitcher: Gtk.Bin, ViewSwitcherProtocol {
+    /// Creates a new HdyViewSwitcher widget.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_view_switcher_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `ViewSwitcher` instance.
@@ -1532,6 +1537,11 @@ public extension ViewSwitcherBarRef {
 /// Use `ViewSwitcherBar` as a strong reference or owner of a `HdyViewSwitcherBar` instance.
 ///
 open class ViewSwitcherBar: Gtk.Bin, ViewSwitcherBarProtocol {
+    /// Creates a new HdyViewSwitcherBar widget.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_view_switcher_bar_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `ViewSwitcherBar` instance.
@@ -4402,6 +4412,11 @@ public extension WindowRef {
 /// Use `Window` as a strong reference or owner of a `HdyWindow` instance.
 ///
 open class Window: Gtk.Window, WindowProtocol {
+    /// Creates a new HdyViewSwitcherTitle widget.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_window_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Window` instance.

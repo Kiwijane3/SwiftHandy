@@ -130,6 +130,11 @@ public extension CarouselIndicatorDotsRef {
 /// Use `CarouselIndicatorDots` as a strong reference or owner of a `HdyCarouselIndicatorDots` instance.
 ///
 open class CarouselIndicatorDots: Gtk.DrawingArea, CarouselIndicatorDotsProtocol {
+    /// Create a new HdyCarouselIndicatorDots widget.
+    @inlinable public override init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_carousel_indicator_dots_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `CarouselIndicatorDots` instance.
@@ -1444,6 +1449,11 @@ public extension CarouselIndicatorLinesRef {
 /// Use `CarouselIndicatorLines` as a strong reference or owner of a `HdyCarouselIndicatorLines` instance.
 ///
 open class CarouselIndicatorLines: Gtk.DrawingArea, CarouselIndicatorLinesProtocol {
+    /// Create a new HdyCarouselIndicatorLines widget.
+    @inlinable public override init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_carousel_indicator_lines_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `CarouselIndicatorLines` instance.
@@ -2758,6 +2768,11 @@ public extension ClampRef {
 /// Use `Clamp` as a strong reference or owner of a `HdyClamp` instance.
 ///
 open class Clamp: Gtk.Bin, ClampProtocol {
+   /// Creates a new HdyClamp.
+   @inlinable public init() {
+       super.init(retainingRaw: UnsafeMutableRawPointer(hdy_clamp_new()!))
+   }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Clamp` instance.
@@ -4136,6 +4151,11 @@ public extension ComboRowRef {
 /// Use `ComboRow` as a strong reference or owner of a `HdyComboRow` instance.
 ///
 open class ComboRow: ActionRow, ComboRowProtocol {
+    /// Creates a new HdyComboRow.
+    @inlinable public override init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_combo_row_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `ComboRow` instance.
@@ -5644,6 +5664,11 @@ public extension DeckRef {
 /// Use `Deck` as a strong reference or owner of a `HdyDeck` instance.
 ///
 open class Deck: Gtk.Container, DeckProtocol {
+    /// Creates a new `Deck`
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_deck_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Deck` instance.

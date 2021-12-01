@@ -466,6 +466,11 @@ public extension ExpanderRowRef {
 /// Use `ExpanderRow` as a strong reference or owner of a `HdyExpanderRow` instance.
 ///
 open class ExpanderRow: PreferencesRow, ExpanderRowProtocol {
+    /// Creates a new HdyExpanderRow.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_expander_row_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `ExpanderRow` instance.
@@ -1966,6 +1971,11 @@ public extension FlapRef {
 /// Use `Flap` as a strong reference or owner of a `HdyFlap` instance.
 ///
 open class Flap: Gtk.Container, FlapProtocol {
+    /// Creates a new HdyFlap.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_flap_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Flap` instance.

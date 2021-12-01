@@ -130,6 +130,11 @@ public extension HeaderBarRef {
 /// Use `HeaderBar` as a strong reference or owner of a `HdyHeaderBar` instance.
 ///
 open class HeaderBar: Gtk.Container, HeaderBarProtocol {
+    /// Creates a new HdyHeaderBar widget.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_header_bar_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `HeaderBar` instance.
@@ -2696,6 +2701,13 @@ public extension KeypadRef {
 /// Use `Keypad` as a strong reference or owner of a `HdyKeypad` instance.
 ///
 open class Keypad: Gtk.Bin, KeypadProtocol {
+    /// Create a new HdyKeypad widget.
+    /// - Parameter symbolsVisible: whether the hash, plus, and asterisk symbols should be visible. Defaults to false
+    /// - Parameter lettersVisible: whether the letters below the digits should be visible. Defaults to false
+    @inlinable public init(symbolsVisible: Bool = false, lettersVisible: Bool = false) {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_keypad_new(symbolsVisible.gbool(), lettersVisible.gbool())!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Keypad` instance.

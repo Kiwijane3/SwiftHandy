@@ -130,6 +130,11 @@ public extension LeafletRef {
 /// Use `Leaflet` as a strong reference or owner of a `HdyLeaflet` instance.
 ///
 open class Leaflet: Gtk.Container, LeafletProtocol {
+    /// Creates a new `Leaflet`.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_leaflet_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Leaflet` instance.
@@ -1822,6 +1827,11 @@ public extension PreferencesGroupRef {
 /// Use `PreferencesGroup` as a strong reference or owner of a `HdyPreferencesGroup` instance.
 ///
 open class PreferencesGroup: Gtk.Bin, PreferencesGroupProtocol {
+    /// Creates a new HdyPreferencesGroup.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_preferences_group_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `PreferencesGroup` instance.

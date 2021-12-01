@@ -130,6 +130,11 @@ public extension WindowHandleRef {
 /// Use `WindowHandle` as a strong reference or owner of a `HdyWindowHandle` instance.
 ///
 open class WindowHandle: Gtk.EventBox, WindowHandleProtocol {
+    /// Creates a new HdyWindowHandle.
+    @inlinable public override init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_window_handle_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `WindowHandle` instance.

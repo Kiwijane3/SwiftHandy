@@ -3123,6 +3123,11 @@ public extension TitleBarRef {
 /// Use `TitleBar` as a strong reference or owner of a `HdyTitleBar` instance.
 ///
 open class TitleBar: Gtk.Bin, TitleBarProtocol {
+    /// Creates a new HdyTitleBar.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_title_bar_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `TitleBar` instance.

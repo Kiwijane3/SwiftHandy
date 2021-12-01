@@ -130,6 +130,11 @@ public extension SqueezerRef {
 /// Use `Squeezer` as a strong reference or owner of a `HdySqueezer` instance.
 ///
 open class Squeezer: Gtk.Container, SqueezerProtocol {
+    /// Creates a new HdySqueezer container.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_squeezer_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Squeezer` instance.
@@ -1722,6 +1727,11 @@ public extension StatusPageRef {
 /// Use `StatusPage` as a strong reference or owner of a `HdyStatusPage` instance.
 ///
 open class StatusPage: Gtk.Bin, StatusPageProtocol {
+    /// Creates a new HdyStatusPage.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_status_page_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `StatusPage` instance.

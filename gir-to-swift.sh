@@ -9,7 +9,6 @@ GOBJECT_LIBDIR=`pkg-config --libs-only-L gobject-introspection-1.0 2>/dev/null |
 GOBJECT_DIR=`dirname "${GOBJECT_LIBDIR}"`
 for prefix in $PREFIX /opt/homebrew /usr/local /usr $GOBJECT_DIR ; do
 	gir_dir=${prefix}/share/gir-1.0
-	echo ${Module}
 	gir=${gir_dir}/${Module}.gir
 	if [ -e "${gir}" ] ; then
 		export GIR=${gir}
@@ -23,4 +22,3 @@ if [ ! -e "${GIR}" ] ; then
 	exit 1
 fi
 gir2swift -v -o Sources/${Mod} -p ${GIR_DIR}/GLib-2.0.gir -p ${GIR_DIR}/GObject-2.0.gir -p ${GIR_DIR}/Gio-2.0.gir -p ${GIR_DIR}/Pango-1.0.gir -p ${GIR_DIR}/cairo-1.0.gir -p ${GIR_DIR}/PangoCairo-1.0.gir -p ${GIR_DIR}/GdkPixbuf-2.0.gir -p ${GIR_DIR}/Atk-1.0.gir -p ${GIR_DIR}/Gdk-3.0.gir -p ${GIR_DIR}/Gtk-3.0.gir "${GIR}"
-rm Sources/${Mod}/Handy-1-ViewSwitcherBarClass-WindowClass.swifts

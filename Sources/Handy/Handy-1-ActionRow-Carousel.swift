@@ -130,6 +130,11 @@ public extension ActionRowRef {
 /// Use `ActionRow` as a strong reference or owner of a `HdyActionRow` instance.
 ///
 open class ActionRow: PreferencesRow, ActionRowProtocol {
+    /// Creates a new HdyActionRow.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_action_row_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `ActionRow` instance.
@@ -1736,6 +1741,11 @@ public extension ApplicationWindowRef {
 /// Use `ApplicationWindow` as a strong reference or owner of a `HdyApplicationWindow` instance.
 ///
 open class ApplicationWindow: Gtk.ApplicationWindow, ApplicationWindowProtocol {
+    /// Creates a new HdyApplicationWindow.
+    @inlinable public init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_application_window_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `ApplicationWindow` instance.
@@ -3239,6 +3249,15 @@ public extension AvatarRef {
 /// Use `Avatar` as a strong reference or owner of a `HdyAvatar` instance.
 ///
 open class Avatar: Gtk.DrawingArea, AvatarProtocol {
+    /// Creates a new HdyAvatar.
+    /// - Parameter size: The size of the avatar
+    /// - Parameter text: The text used to generate the color and initials if show_initials is TRUE. The color is selected at random if text is empty.
+    /// - Parameter showInitials: whether to show the initials or the fallback icon on top of the color generated based on text.
+    @inlinable public init(size: Int, text: UnsafePointer<gchar>!, showInitials: Bool) {
+        let ptr = hdy_avatar_new(gint(size), text, showInitials.gbool())!
+        super.init(retainingRaw: UnsafeMutableRawPointer(ptr))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Avatar` instance.
@@ -4737,6 +4756,11 @@ public extension CarouselRef {
 /// Use `Carousel` as a strong reference or owner of a `HdyCarousel` instance.
 ///
 open class Carousel: Gtk.EventBox, CarouselProtocol {
+    /// Create a new HdyCarousel widget.
+    @inlinable public override init() {
+        super.init(retainingRaw: UnsafeMutableRawPointer(hdy_carousel_new()!))
+    }
+
         /// Designated initialiser from the underlying `C` data type.
     /// This creates an instance without performing an unbalanced retain
     /// i.e., ownership is transferred to the `Carousel` instance.
